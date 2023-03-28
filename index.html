@@ -1,1 +1,60 @@
-<h1>heading</h1>
+<html>
+    <head>
+        <title>Eddie Project1 Wordle</title>
+        <meta charset="8">
+        <link rel="stylesheet" href="wordle.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+        <script src="wordle-words.js"></script>
+        <script src="wordle.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="wordle">
+                <button onclick='howToPlay()' id="howtoplay">?</button>
+                <div id="title">Wordle</div>
+                <button onclick='refreshPage()' id="restart">Restart</button>
+            </div>
+        </div>
+        <div id="gamecontainer">
+            <div id="board"></div>
+            <div id="keyboard">
+                <div class="row" id="row-1">
+                    <button data-key="q" class="key">q</button>
+                    <button data-key="w" class="key">w</button>
+                    <button data-key="e" class="key">e</button>
+                    <button data-key="r" class="key">r</button>
+                    <button data-key="t" class="key">t</button>
+                    <button data-key="y" class="key">y</button>
+                    <button data-key="u" class="key">u</button>
+                    <button data-key="i" class="key">i</button>
+                    <button data-key="o" class="key">o</button>
+                    <button data-key="p" class="key">p</button>
+                </div>
+                <div class="row" id="row-2">
+                    <button data-key="a" class="key">a</button>
+                    <button data-key="s" class="key">s</button>
+                    <button data-key="d" class="key">d</button>
+                    <button data-key="f" class="key">f</button>
+                    <button data-key="g" class="key">g</button>
+                    <button data-key="h" class="key">h</button>
+                    <button data-key="j" class="key">j</button>
+                    <button data-key="k" class="key">k</button>
+                    <button data-key="l" class="key">l</button>
+                </div>
+                <div class="row" id="row-3">
+                    <button data-key="enter" class="key" id="enterkey">Enter</button>
+                    <button data-key="z" class="key">z</button>
+                    <button data-key="x" class="key">x</button>
+                    <button data-key="c" class="key">c</button>
+                    <button data-key="v" class="key">v</button>
+                    <button data-key="b" class="key">b</button>
+                    <button data-key="n" class="key">n</button>
+                    <button data-key="m" class="key">m</button>
+                    <button data-key="delete" class="key" id="deletekey">Delete</button>
+            </div>
+        </div>
+    </body>
+</html>

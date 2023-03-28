@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+#container{
+    background-color: black;
+    text-align: center;
+}
+
+#wordle{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+
+}
+#wordle #restart{
+    width: 75px;
+    height: 55px;
+    font-size: 20px;
+    background-color: black;
+    color:white;
+}
+
+#wordle #howtoplay{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+}
+
+#wordle #title{
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+
+#gamecontainer{
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+#board {
+    display: grid;    
+    grid-template-columns: repeat(5,1fr);
+    grid-gap:5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.square{
+    border: 2px solid rgb(58,58,60);
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: white;
+}
+
+#keyboard{
+    height: 200px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    touch-action: manipulation;
+}
+
+
+
+.row button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    background-color: rgb(129,131,132);
+    color: rgb(215,218,220);
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin-right: 6px;
+    border-radius: 5px;
+    font-size: 20px;
+    
+}
+
+#row-2 {
+    width: 95%;
+    margin: 10 2.5% 0 2.5%;
+}
+
+
+#enterkey{
+    flex-grow: 6;
+}
+
+#deletekey{
+    flex-grow: 6;
+}
+
+
+
+
+
