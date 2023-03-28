@@ -1,6 +1,6 @@
 function howToPlay(){
     let image = document.getElementById('howtoplay');
-    image.sc="howtoplay.jpgr";
+    image.src="howtoplay.jpgr";
     alert("Onload image"+image);
 }
 
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for(let i = 0; i < keys.length; i++){
         keys[i].onclick = (event) =>{
         const key = event.target.getAttribute('data-key');
+        console.log(key);
         //If key = enter , click the Enter button tp call the submit function//
         if(key === 'enter'){
             submitWord()
@@ -70,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!correctLetter){
             return "rgb(58,58,60)";
         }
-
+        //Check the letter is in 
         const rightPosition = word.charAt(index)
         console.log(rightPosition);
         const correctPosition = (key === rightPosition);
@@ -114,9 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const letterEl = document.getElementById(letterId);
                 letterEl.classList.add('animate__flipInX');
                 letterEl.style = `background-color:${tileColor}; border-color:${tileColor}`
+
+                const keyboardButton = document.getElementById(key);
+                keyboardButton.classList.add("animate__flipInX");
+                keyboardButton.style = `background-color:${tileColor}; border-color:${tileColor}`
+
                 
             },interval*index)
         })
+        
 
         guessWordCount += 1;
 
@@ -153,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
             aviableSpaceElement.textContent = key;
         }
     }
+
+// 
 })
 
 
