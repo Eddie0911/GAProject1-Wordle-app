@@ -7,7 +7,7 @@
 ## How to install and Run the project ##
 Wordle is an online game that can be played directly on the Wordle website without the need for installation. To play Wordle, follow these steps:
 
-- Open a web browser and go to the Wordle website (https://www.powerlanguagegames.com/wordle/).
+- Open a web browser and go to the Wordle website ([https://github.com/Eddie0911/GAProject1-Wordle-app]).
 
 - Once the Wordle website loads, You will see a talbe of 30squares and keyboard, you need to guess a five-letter random word by using the keyboard, 5 letters each time, after you done. click the *"Enter"* button.
 
