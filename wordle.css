@@ -127,7 +127,35 @@ html,body{
     flex-grow: 6;
 }
 
+.popup{
+    display: flex;
+    width: 75px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50.5%;
+    text-align:center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.popup > img{
+    width: 500px;
+    height: 500px;
+}
 
 
+.show{
+    visibility: visible;
+}
 
-
+#closebutton{
+    display: flex;
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}

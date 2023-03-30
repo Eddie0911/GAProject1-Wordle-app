@@ -1,7 +1,11 @@
 function howToPlay(){
-    let image = document.getElementById('howtoplay');
-    image.src="howtoplay.jpgr";
-    alert("Onload image"+image);
+    const visibility = document.getElementById('popup');
+    visibility.classList.add('show');    
+}
+
+function closeBtn(){
+    const closeHowToPlay = document.getElementById('popup');
+    closeHowToPlay.classList.remove('show');
 }
 
 function refreshPage(){
@@ -86,13 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
 //function for delete last letter//
     function deleteLetter(){
         const currentWordArray = getCurrentWordArray();
-        const remove = currentWordArray.pop();
+         currentWordArray.pop();
 
         guessWord[guessWord.length - 1] = currentWordArray;
-
+        console.log(guessWord)
+        
         const lastLetter = document.getElementById(`${aviableSpace -1}`);
         lastLetter.textContent = '';
         aviableSpace = aviableSpace - 1;
+
+        return currentWordArray;
     }
 
 //function for submit words//
@@ -139,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         guessWord.push([]);
+        console.log(guessWord);
     }
 
 //Set a array to save the letters put//
@@ -153,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //If the words the array is less than 5 keep update letters until 5letters//
         if(currentWordArray && currentWordArray.length < 5){
             currentWordArray.push(key)
+            console.log(currentWordArray)
 
             //Put the data-key value to Id//
             const aviableSpaceElement = document.getElementById(`${aviableSpace}`);
