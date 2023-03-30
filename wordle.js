@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let aviableSpace = 1;
     //Set for helping finding the id of the first letters for each guss//
     let guessWordCount = 0;
-
+    //Micheal helped, 
     let deleteCutOff = 1;
 
 
@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
             window.alert('must be 5 letters');
             return updateGuessedWords;
         }
-
         deleteCutOff = deleteCutOff+5;
+
         const currentWord = currentWordArray.join(''); 
         const firstLetterId = guessWordCount*5 +1;
         const interval = 200;
