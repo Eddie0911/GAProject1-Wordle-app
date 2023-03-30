@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //Set for helping finding the id of the first letters for each guss//
     let guessWordCount = 0;
 
+    let deleteCutOff = 1;
+
 
 //Get the key value from click//
     const keys = document.querySelectorAll(".key");
@@ -95,9 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
         guessWord[guessWord.length - 1] = currentWordArray;
         console.log(guessWord)
         
+        if(aviableSpace > deleteCutOff){
         const lastLetter = document.getElementById(`${aviableSpace -1}`);
         lastLetter.textContent = '';
         aviableSpace = aviableSpace - 1;
+        }
 
         return currentWordArray;
     }
@@ -110,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return updateGuessedWords;
         }
 
+        deleteCutOff = deleteCutOff+5;
         const currentWord = currentWordArray.join(''); 
         const firstLetterId = guessWordCount*5 +1;
         const interval = 200;
